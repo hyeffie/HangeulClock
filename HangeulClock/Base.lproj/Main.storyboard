@@ -363,9 +363,9 @@
                         <outletCollection property="onesOfMinutesLabels" destination="SBS-hh-pRx" collectionClass="NSMutableArray" id="otx-E1-6t2"/>
                         <outletCollection property="onesOfMinutesLabels" destination="ajN-5l-HTM" collectionClass="NSMutableArray" id="9Ao-1W-YCE"/>
                         <outletCollection property="onesOfMinutesLabels" destination="1KH-wd-uo3" collectionClass="NSMutableArray" id="ems-ge-7iV"/>
-                        <outletCollection property="noonLables" destination="rIv-B6-XP8" collectionClass="NSMutableArray" id="djb-DZ-ibo"/>
-                        <outletCollection property="noonLables" destination="1gA-q8-RDa" collectionClass="NSMutableArray" id="0hE-oc-zKg"/>
-                        <outletCollection property="noonLables" destination="Xv8-xj-jK3" collectionClass="NSMutableArray" id="CEW-Ei-BtE"/>
+                        <outletCollection property="amPmLabels" destination="rIv-B6-XP8" collectionClass="NSMutableArray" id="djb-DZ-ibo"/>
+                        <outletCollection property="amPmLabels" destination="1gA-q8-RDa" collectionClass="NSMutableArray" id="0hE-oc-zKg"/>
+                        <outletCollection property="amPmLabels" destination="Xv8-xj-jK3" collectionClass="NSMutableArray" id="CEW-Ei-BtE"/>
                         <outletCollection property="hoursLabels" destination="Ya8-UA-3GJ" collectionClass="NSMutableArray" id="2eO-Yw-6ly"/>
                     </connections>
                 </viewController>
