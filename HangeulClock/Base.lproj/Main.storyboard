@@ -278,7 +278,7 @@
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="정각" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4jN-l0-vCE">
                                                         <rect key="frame" x="0.0" y="0.0" width="84.333333333333329" height="80"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="29"/>
-                                                        <color key="textColor" systemColor="systemGrayColor"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cYe-a5-2Ur">
@@ -287,19 +287,19 @@
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="오십" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RcX-db-0S4">
                                                                 <rect key="frame" x="0.0" y="0.0" width="84.333333333333329" height="50"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
-                                                                <color key="textColor" systemColor="systemGrayColor"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="일초" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TJn-Kn-Fbr">
                                                                 <rect key="frame" x="0.0" y="30.333333333333368" width="84.333333333333329" height="49.666666666666657"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
-                                                                <color key="textColor" systemColor="systemGrayColor"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>
                                                     </stackView>
                                                 </subviews>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstItem="cYe-a5-2Ur" firstAttribute="leading" secondItem="OjC-QI-tz9" secondAttribute="leading" id="CjD-Oq-k2D"/>
                                                     <constraint firstItem="4jN-l0-vCE" firstAttribute="leading" secondItem="OjC-QI-tz9" secondAttribute="leading" id="EIc-vY-302"/>
@@ -317,7 +317,7 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="WOK-Ql-cbI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="00c-f7-zFi"/>
                             <constraint firstItem="WOK-Ql-cbI" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="fN2-bW-rVY"/>
@@ -325,6 +325,49 @@
                             <constraint firstItem="WOK-Ql-cbI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="rA7-ny-IKG"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="firstOf6Label" destination="wka-A1-aHb" id="EDe-2O-LRU"/>
+                        <outlet property="firstOf8Label" destination="oaJ-oq-5c0" id="cp7-3k-RAk"/>
+                        <outlet property="onesOfSecondsLabel" destination="TJn-Kn-Fbr" id="lK0-Xb-5RA"/>
+                        <outlet property="symbolLabel" destination="23a-MU-4AC" id="bns-MJ-y20"/>
+                        <outlet property="tensAndOnesStackView" destination="cYe-a5-2Ur" id="uCp-HF-vYk"/>
+                        <outlet property="tensOfSecondsLabel" destination="RcX-db-0S4" id="gN4-Np-QaI"/>
+                        <outlet property="zeroSecondLabel" destination="4jN-l0-vCE" id="6kh-OO-frQ"/>
+                        <outletCollection property="hoursLabels" destination="Xz2-S0-j4C" collectionClass="NSMutableArray" id="Ig4-WR-K2t"/>
+                        <outletCollection property="hoursLabels" destination="ull-h9-SZ7" collectionClass="NSMutableArray" id="rGg-gv-ek0"/>
+                        <outletCollection property="hoursLabels" destination="iTw-c5-6vg" collectionClass="NSMutableArray" id="Ner-hV-jMu"/>
+                        <outletCollection property="hoursLabels" destination="ok3-e3-tIY" collectionClass="NSMutableArray" id="Ost-l9-ep4"/>
+                        <outletCollection property="hoursLabels" destination="taX-FA-Cfr" collectionClass="NSMutableArray" id="SmM-7A-HEt"/>
+                        <outletCollection property="hoursLabels" destination="J98-os-8th" collectionClass="NSMutableArray" id="jQC-U2-ZGL"/>
+                        <outletCollection property="hoursLabels" destination="RPm-uk-2t6" collectionClass="NSMutableArray" id="WYA-ne-g8F"/>
+                        <outletCollection property="hoursLabels" destination="wka-A1-aHb" collectionClass="NSMutableArray" id="Ixt-tJ-xF0"/>
+                        <outletCollection property="hoursLabels" destination="swJ-XU-bZ9" collectionClass="NSMutableArray" id="ta1-wY-2Ot"/>
+                        <outletCollection property="hoursLabels" destination="jpa-pB-Onx" collectionClass="NSMutableArray" id="A2R-Cu-kPG"/>
+                        <outletCollection property="hoursLabels" destination="qv9-LV-QHi" collectionClass="NSMutableArray" id="44Q-xL-Rn1"/>
+                        <outletCollection property="hoursLabels" destination="oaJ-oq-5c0" collectionClass="NSMutableArray" id="9Ey-2W-8Hc"/>
+                        <outletCollection property="hoursLabels" destination="lPb-tG-nBt" collectionClass="NSMutableArray" id="6KA-Eo-XaR"/>
+                        <outletCollection property="hoursLabels" destination="mKZ-xQ-m8z" collectionClass="NSMutableArray" id="UKL-zx-0di"/>
+                        <outletCollection property="hoursLabels" destination="TC2-ch-WCL" collectionClass="NSMutableArray" id="hvL-iY-Poi"/>
+                        <outletCollection property="tensOfMinutesLabels" destination="9pR-H4-4eO" collectionClass="NSMutableArray" id="IHs-tB-lFX"/>
+                        <outletCollection property="tensOfMinutesLabels" destination="Qko-jc-sA5" collectionClass="NSMutableArray" id="bCU-Sp-WoR"/>
+                        <outletCollection property="tensOfMinutesLabels" destination="TdL-Nb-zxQ" collectionClass="NSMutableArray" id="cRQ-F0-Qak"/>
+                        <outletCollection property="tensOfMinutesLabels" destination="sr6-E5-yOk" collectionClass="NSMutableArray" id="cZS-sV-5xt"/>
+                        <outletCollection property="tensOfMinutesLabels" destination="AhP-19-Y1Q" collectionClass="NSMutableArray" id="flN-0K-c0C"/>
+                        <outletCollection property="onesOfMinutesLabels" destination="Tzf-Up-XsR" collectionClass="NSMutableArray" id="rrp-QA-aWU"/>
+                        <outletCollection property="onesOfMinutesLabels" destination="FXf-tK-w4S" collectionClass="NSMutableArray" id="bNt-55-grn"/>
+                        <outletCollection property="onesOfMinutesLabels" destination="1ft-1H-tFW" collectionClass="NSMutableArray" id="H8a-0v-DkJ"/>
+                        <outletCollection property="onesOfMinutesLabels" destination="dIK-uu-VgX" collectionClass="NSMutableArray" id="KQd-wS-Y9y"/>
+                        <outletCollection property="onesOfMinutesLabels" destination="ijR-yI-Srt" collectionClass="NSMutableArray" id="BVd-09-7NE"/>
+                        <outletCollection property="onesOfMinutesLabels" destination="fwd-CF-udh" collectionClass="NSMutableArray" id="fZ1-Yy-q8C"/>
+                        <outletCollection property="onesOfMinutesLabels" destination="YtN-FO-nRh" collectionClass="NSMutableArray" id="h5U-d1-YDw"/>
+                        <outletCollection property="onesOfMinutesLabels" destination="SBS-hh-pRx" collectionClass="NSMutableArray" id="otx-E1-6t2"/>
+                        <outletCollection property="onesOfMinutesLabels" destination="ajN-5l-HTM" collectionClass="NSMutableArray" id="9Ao-1W-YCE"/>
+                        <outletCollection property="onesOfMinutesLabels" destination="1KH-wd-uo3" collectionClass="NSMutableArray" id="ems-ge-7iV"/>
+                        <outletCollection property="noonLables" destination="rIv-B6-XP8" collectionClass="NSMutableArray" id="djb-DZ-ibo"/>
+                        <outletCollection property="noonLables" destination="1gA-q8-RDa" collectionClass="NSMutableArray" id="0hE-oc-zKg"/>
+                        <outletCollection property="noonLables" destination="Xv8-xj-jK3" collectionClass="NSMutableArray" id="CEW-Ei-BtE"/>
+                        <outletCollection property="hoursLabels" destination="Ya8-UA-3GJ" collectionClass="NSMutableArray" id="2eO-Yw-6ly"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -332,9 +375,6 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemGrayColor">
             <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
