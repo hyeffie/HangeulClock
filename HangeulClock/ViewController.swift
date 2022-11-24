@@ -36,6 +36,7 @@ final class ViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
+    updateTimeLabels()
     Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { [weak self] timer in
       guard let self else { return }
       self.updateTimeLabels()
@@ -63,16 +64,16 @@ final class ViewController: UIViewController {
     onesOfSecondsLabel.text = seconds.ones
   }
   
-  private func configureState(of label: UILabel, for isOn: Bool) {
-    label.textColor = isOn ? .white : .gray
-  }
-  
   private func update(_ labels: [UILabel], with timeString: String) {
     labels.forEach { label in
       guard let text = label.text,
             let char = text.trimmingCharacters(in: .whitespaces).first else { return }
       configureState(of: label, for: timeString.contains(char))
     }
+  }
+  
+  private func configureState(of label: UILabel, for isOn: Bool) {
+    label.textColor = isOn ? .white : .gray
   }
 
 }

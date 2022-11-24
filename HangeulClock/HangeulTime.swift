@@ -19,8 +19,8 @@ final class HangeulTime {
     let now = Date()
     let components = calendar.dateComponents([.hour, .minute, .second], from: now)
     guard let h = components.hour, (0 ... 23).contains(h),
-          let m = components.minute, (1 ... 59).contains(m),
-          let s = components.second, (1 ... 59).contains(s) else { return (0, 0, 0) }
+          let m = components.minute, (0 ... 59).contains(m),
+          let s = components.second, (0 ... 59).contains(s) else { return (0, 0, 0) }
     return (h, m, s)
   }
   
