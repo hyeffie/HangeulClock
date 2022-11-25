@@ -49,8 +49,9 @@ final class ViewController: UIViewController {
     
     let hour = hangeulTime.hours
     update(hoursLabels, with: hour)
-    configureState(of: firstOf6Label, for: hour.contains("섯"))
-    configureState(of: firstOf8Label, for: hour.contains("덟"))
+    removeRedundantCharacters(in: hoursLabels,
+                              whenItIs: hour,
+                              with: ["여섯": firstOf6Label, "여덟": firstOf8Label])
     
     let minute = hangeulTime.minutes
     update(tensOfMinutesLabels, with: minute.tens)
@@ -75,5 +76,24 @@ final class ViewController: UIViewController {
   private func configureState(of label: UILabel, for isOn: Bool) {
     label.textColor = isOn ? .white : .gray
   }
-
+  
+  private func removeRedundantCharacters(
+    in collection: [UILabel],
+    whenItIs time: String,
+    with pairs: [String: UILabel]
+  ) {
+    guard let text = pairs.first?.value.text,
+          let redundantChar = text.trimmingCharacters(in: .whitespaces).first else { return }
+    let suspects = collection.filter { label in
+      guard let text = label.text,
+            let labelChar = text.trimmingCharacters(in: .whitespaces).first else { return false }
+      return labelChar == redundantChar
+    }
+    
+    guard let targetLabel = pairs.filter({ pair in time.contains(pair.key) }).first?.value else { return }
+    suspects.forEach { suspect in
+      configureState(of: suspect, for: suspect === targetLabel)
+    }
+  }
+  
 }
